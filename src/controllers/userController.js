@@ -1,6 +1,6 @@
 const fs = require("fs");
 const User = require("../models/userModel");
-const APIFeatures = require("../util/APIFeatures");
+const APIFeatures = require("./../util/apiFeatures");
 
 exports.getUser = async (req, res) => {
   try {
