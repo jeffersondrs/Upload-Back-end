@@ -1,10 +1,5 @@
-const http = require('http');
-
+require("dotenv").config();
 const mongoose = require('mongoose');
-const dotenv = require('dotenv');
-const morgan = require('morgan');
-
-dotenv.config({ path: '.env' });
 
 const app = require('./app');
 const DB = process.env.DATABASE.replace(
