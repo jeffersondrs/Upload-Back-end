@@ -13,7 +13,7 @@ mongoose.connect(DB, {
     console.log(`Banco conectado: ${con.connection.host}`);
 })
 
-const port = process.env.port || 4500;
-app.listen(port, '127.0.0.1', () => {
+const PORT = process.env.PORT || 4500;
+app.listen(PORT, '127.0.0.1', () => {
     console.log(`Server started on port ${port}`);
 });
