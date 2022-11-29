@@ -14,7 +14,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(morgan("dev"));
 app.use("/files", express.static(path.resolve(__dirname, "tmp", "uploads")));
 
-app.use(session({ secret: "secret12345" }));
+app.use(
+  session({ secret: "secret12345", resave: true, saveUninitialized: true })
+);
 
 app.use("/nodeapp", userRouter);
 

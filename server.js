@@ -1,4 +1,4 @@
-require("dotenv").config();
+require('dotenv').config({ path: 'CONFIG.ENV' });
 const mongoose = require('mongoose');
 
 const app = require('./app');
@@ -6,7 +6,6 @@ const DB = process.env.DATABASE.replace(
     '<PASSWORD>',
     process.env.DATABASE_PASSWORD
 );
-
 mongoose.connect(DB, {
     useNewUrlParser: true,
 }).then(con => {
